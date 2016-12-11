@@ -18,10 +18,13 @@
   <% if signed_in? %>
   <%= link_to current_user.name, User.find(current_user.id) %>
   <%= link_to "Log out", logout_path, method: "delete" %>
+  <%= link_to "Create event", new_event_path %>
   <% else %>
   <%= link_to "Sign in", login_path %>
   <%= link_to "Sign up", new_user_path %>
   <% end %>
+  <br>
+  --------------------------------------------------
   <br><br>
   <%= yield %>
   </body>

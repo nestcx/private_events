@@ -1,2 +1,9 @@
 <%= @user.name %><br>
 <%= @user.email %>
+<br><br>-----------------------<br>
+<h3><%= current_user.name %>'s Events:</h3>
+<% @user.events.each do |event| %>
+	<h4><%= link_to event.title, event %></h4>
+	<p><%= event.description %></p>
+	-----------------------
+<% end %>

@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :events, :foreign_key => :creator_id
 
   before_save { self.email = email.downcase }
   before_create :create_remember_token
