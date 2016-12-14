@@ -1,2 +1,10 @@
 <h3><%= @event.title %></h3>
 <p><%= @event.description %><p>
+
+<p>date: <%= @event.date %></p>
+
+<h4>Attendees</h4>
+<% @event.attendees.each do |x| %>
+	<%= x.name %>
+<% end %>
+

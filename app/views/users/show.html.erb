@@ -7,3 +7,18 @@
 	<p><%= event.description %></p>
 	-----------------------
 <% end %>
+
+<h3>Attending events</h3>
+<% current_user.attended_events.each do |x| %>
+<%= link_to x.title, x if 1==1%><br>
+<% end %>
+
+<h3>Upcoming Events</h3>
+<% @upcoming_events.each do |x| %>
+<%= link_to x.title, x %>
+<% end %>
+
+<h3>Previous Events</h3>
+<% @previous_events.each do |x| %>
+<%= link_to x.title, x %>
+<% end %>
